@@ -1,8 +1,8 @@
-@use "normalize.css";
-@use "variables.scss";
-@use "title.scss";
-@use "link.scss";
-@use "list.scss";
+@use "_normalize.css";
+@use "_var.scss";
+@use "_type.scss";
+@use "_link.scss";
+@use "_list.scss";
 
   
   /* Mise en place */
@@ -50,8 +50,8 @@
   }
   .footer--cs{
       background-color: var(--color-bg-offset);
-  }
-  
+  }  
+
   /* Cards */
   .card{
       background-color: var(--color-card);
@@ -67,8 +67,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-  }
-  
+  } 
+
   /* Layout */
   .title--big{
       margin-bottom: 1rem;
@@ -92,16 +92,15 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-  }
-  
+  }  
+
   /* Layout Case Study */
   .section--cs{
       padding: 3rem 1.5rem;
   }
   .bg--cs{
       background: var(--color-bg);    
-  }
-  
+  }  
   .menu--cs{
       display: none;
   }
