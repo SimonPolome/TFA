@@ -1,10 +1,132 @@
-<html>
-	<head>
-		<title>Gulp Starter Pack</title>
-		<link href="/assets/css/main.css" rel="stylesheet" >
-	</head>
-	<body>
-		<h1>Gulp Starter Pack</h1>
-		<script src="/assets/js/main.min.js" ></script>
-	</body>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Privaci | TFA — Simon Polomé</title>
+
+    <!--Meta Google-->
+    <meta name="title" content="Privaci | TFA — Simon Polomé">
+    <meta name="description" content="Les meilleurs conseils en sécurité informatique">
+  
+    <!--Meta Facebook-->  
+    <meta property="og:title" content="Privaci | TFA — Simon Polomé"/>
+    <meta property="og:description" content="Les meilleurs conseils en sécurité informatique!"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://simon-polome.ovh/projets/tfa/"/>
+    <meta property="og:image" content="https://unsplash.com/photos/Ww-Wo3JIWSA"/>
+  
+    <!--Meta twitter-->  
+    <meta name="twitter:title" content="Privaci | TFA — Simon Polomé">
+    <meta name="twitter:description" content="Les meilleurs conseils en sécurité informatique">
+    <meta name="twitter:url" content="http://simon-polome.ovh/projets/tfa/">
+    <meta name="twitter:image" content="https://unsplash.com/photos/Ww-Wo3JIWSA">
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/main.css">  
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="/assets/js/main.min.js" defer></script>  
+</head>
+<body data-theme="light">
+
+    <!--header-->
+    <header>
+        <div class="container">
+            <div class="header">
+                <a href="index.html" class="logo">Privaci</a>
+                <a href="#" class="menu">
+                    <div class="menu__line menu__line--top"></div>
+                    <div class="menu__line menu__line--bottom"></div>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__menu">
+                        <li class="nav__link link"><a href="#apropos">À propos</a></li>
+                        <li class="nav__link link"><a href="#fonctionnalites">Fonctionnalités</a></li>
+                        <li class="nav__link link"><a href="#telechargement">Téléchargement</a></li>            
+                    </ul>
+                    <label class="theme-switch" for="checkbox">
+                        <input type="checkbox" id="checkbox" />
+                        <span class="slider round"></span>
+                    </label>
+                </nav> 
+            </div>
+            <div class="section section--home" data-aos="fade-up" data-aos-duration="2000"> 
+                <img src="assets/images/logo.svg" alt="logo Privaci" class="icon--privaci">               
+                <h1 class="title title--big">Les meilleurs conseils en sécurité informatique</h1>
+                <h2 class=" title title--light title--small title--weight">Privaci est le moyen le plus facile pour apprendre à mieux protéger ses données personnelles et corriger ses mauvaises habitudes</h2>
+                <a href="https://www.figma.com/proto/gbg0M7uI3pJkHOfMN8rsqM/Privaci-MVP?node-id=2%3A2&scaling=scale-down&page-id=0%3A1&starting-point-node-id=2%3A2" class="btn btn--1">Essayer Privaci</a>
+                <img src="assets/images/proto-bg.png" srcset="assets/images/proto-bg@2x.png 2x" alt="Prototype de l'application" class="image image--1">
+            </div>
+        </div>
+    </header>  
+
+    <!--main-->
+    <main> 
+        <section class="section section--apropos">
+            <div id="apropos" class="container container-apropos">
+                <div class="content" data-aos="fade-left" data-aos-duration="1500">
+                    <h2 class="title title--medium">La sécurité de nos utilisateurs avant tout</h2>                
+                    <h3 class="title title--small title--weight">L'application idéale pour retrouver toutes les meilleures astuces pour sécuriser vos données personnelles. Vous retrouverez les règles de base à respecter pour pouvoir naviguer en toute sécurité et sérénité.</h3>
+                </div>
+                <img src="assets/images/proto.png" srcset="assets/images/proto@2x.png 2x" alt="Prototype de l'application" class="image image--2">
+                
+            </div>
+        </section>
+        <section id="fonctionnalites" class="section section--fonctionnalites">
+            <div class="container container--card" data-aos="fade-down" data-aos-duration="2000">
+                <div class="card card--1">
+                    <svg class="icon--card" height="512pt" viewBox="-11 0 512 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m245.292969 411.585938c48.546875 0 88.042969-39.496094 88.042969-88.046876 0-48.546874-39.496094-88.042968-88.042969-88.042968-48.550781 0-88.046875 39.496094-88.046875 88.042968 0 48.550782 39.496094 88.046876 88.046875 88.046876zm-51.867188-101.902344c5.789063-5.792969 15.175781-5.792969 20.96875 0l19.351563 19.351562 42.445312-42.445312c5.792969-5.789063 15.179688-5.789063 20.96875 0 5.789063 5.789062 5.789063 15.175781 0 20.96875l-52.929687 52.929687c-2.78125 2.78125-6.550781 4.339844-10.484375 4.339844s-7.703125-1.558594-10.484375-4.339844l-29.835938-29.839843c-5.789062-5.789063-5.789062-15.175782 0-20.964844zm0 0"/><path d="m0 464.050781c0 26.4375 21.511719 47.949219 47.949219 47.949219h394.679687c26.4375 0 47.949219-21.511719 47.949219-47.949219v-299.320312h-490.578125zm245.292969-258.207031c64.898437 0 117.695312 52.796875 117.695312 117.695312 0 64.898438-52.796875 117.699219-117.695312 117.699219-64.898438 0-117.699219-52.800781-117.699219-117.699219 0-64.898437 52.800781-117.695312 117.699219-117.695312zm0 0"/><path d="m490.574219 135.078125v-45.675781c0-26.441406-21.507813-47.949219-47.949219-47.949219h-27.03125v26.628906c0 8.195313-6.644531 14.824219-14.828125 14.824219-8.191406 0-14.824219-6.628906-14.824219-14.824219v-26.628906h-29.140625v26.628906c0 8.195313-6.628906 14.824219-14.824219 14.824219-8.183593 0-14.828124-6.628906-14.828124-14.824219v-26.628906h-163.710938v26.628906c0 8.195313-6.640625 14.824219-14.824219 14.824219-8.195312 0-14.828125-6.628906-14.828125-14.824219v-26.628906h-29.136718v26.628906c0 8.195313-6.644532 14.824219-14.828126 14.824219-8.183593 0-14.824218-6.628906-14.824218-14.824219v-26.628906h-27.042969c-26.441406 0-47.94921875 21.507813-47.94921875 47.949219v45.675781zm0 0"/><path d="m415.59375 14.824219c0-8.183594-6.644531-14.824219-14.828125-14.824219-8.191406 0-14.824219 6.640625-14.824219 14.824219v26.628906h29.652344zm0 0"/><path d="m356.800781 14.824219c0-8.183594-6.628906-14.824219-14.824219-14.824219-8.183593 0-14.828124 6.640625-14.828124 14.824219v26.628906h29.652343zm0 0"/><path d="m163.4375 14.824219c0-8.183594-6.640625-14.824219-14.824219-14.824219-8.195312 0-14.828125 6.640625-14.828125 14.824219v26.628906h29.652344zm0 0"/><path d="m104.648438 14.824219c0-8.183594-6.644532-14.824219-14.828126-14.824219-8.183593 0-14.824218 6.640625-14.824218 14.824219v26.628906h29.652344zm0 0"/></svg>
+                    <h3 class="title title--small title--card">Conseils quotidiens</h3>
+                    <p>Accéder à trois conseils par jour pour apprendre petit à petit</p>
+                </div>
+                <div class="card card--2">
+                    <svg class="icon--card" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><g><path d="m420.75 26.042h-329.5c-50.31 0-91.25 40.94-91.25 91.26v179.08c0 50.32 40.94 91.25 91.25 91.25h82.02l70.82 92.45c6 7.84 17.82 7.83 23.82 0l70.82-92.45h82.02c50.31 0 91.25-40.93 91.25-91.25v-179.08c0-50.32-40.94-91.26-91.25-91.26zm-59.68 203.06-94.46 94.46c-5.85 5.86-15.35 5.86-21.21 0l-94.47-94.46c-28.25-28.25-28.25-73.97 0-102.21 28.18-28.18 74.03-28.18 102.21 0l2.86 2.86 2.86-2.85c13.65-13.66 31.8-21.18 51.1-21.18 19.31 0 37.46 7.52 51.11 21.17 28.18 28.18 28.18 74.03 0 102.21z"/><path d="m339.86 207.892-83.86 83.85-83.86-83.85c-26.37-26.37-7.93-72.17 29.89-72.17 11.3 0 21.91 4.39 29.9 12.38l13.47 13.47c5.85 5.86 15.36 5.86 21.21 0l13.46-13.46c7.99-7.99 18.6-12.39 29.9-12.39 37.38 0 56.54 45.52 29.89 72.17z"/></g></svg>
+                    <h3 class="title title--small title--card">Système de favoris</h3>
+                    <p>Trier les conseils qui vous intéressent pour plus tard</p>
+                </div>
+                <div class="card card--3">
+                    <svg class="icon--card" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m331.072 187.751c0-8.284-6.74-15.023-15.024-15.023s-15.023 6.739-15.023 15.023 6.739 15.024 15.023 15.024 15.024-6.74 15.024-15.024z"/><path d="m210.976 187.751c0-8.284-6.739-15.023-15.023-15.023s-15.024 6.739-15.024 15.023 6.74 15.024 15.024 15.024 15.023-6.74 15.023-15.024z"/><path d="m240.976 232.775h30.049v159.152h-30.049z"/><path d="m256 0c-103.526 0-187.751 84.225-187.751 187.751 0 32.724 8.551 64.947 24.729 93.188 14.268 24.908 34.195 46.345 57.95 62.421v48.567h60.048v-159.152h-15.023c-24.826 0-45.024-20.198-45.024-45.024s20.198-45.023 45.024-45.023 45.023 20.197 45.023 45.023c0 5.267-.917 10.323-2.587 15.024h35.223c-1.67-4.702-2.587-9.757-2.587-15.024 0-24.826 20.197-45.023 45.023-45.023s45.024 20.197 45.024 45.023-20.198 45.024-45.024 45.024h-15.023v159.152h60.048v-48.567c23.755-16.076 43.683-37.513 57.95-62.421 16.178-28.241 24.729-60.465 24.729-93.188-.001-103.526-84.226-187.751-187.752-187.751z"/><path d="m150.928 481.976h210.145v30.024h-210.145z"/><path d="m150.928 421.928h210.145v30.048h-210.145z"/></svg>
+                    <h3 class="title title--small title--card">Astuces en tout genre</h3>
+                    <p>Retrouver toutes les atuces disponibles, triées par catégorie</p>
+                </div>
+            </div>
+        </section>
+        <section id="telechargement" class="section section--telechargement">
+            <div class="container">
+                <h2 class="title title--medium title--telechargement">ESSAYER MAINTENANT PRIVACI</h2>
+                <a href="https://www.figma.com/proto/gbg0M7uI3pJkHOfMN8rsqM/Privaci-MVP?node-id=2%3A2&scaling=scale-down&page-id=0%3A1&starting-point-node-id=2%3A2" class="btn btn--2" data-aos="zoom-in" data-aos-duration="1000">Essayer Privaci</a>
+            </div>
+        </section>
+    </main>
+
+    <!--footer-->
+    <footer class="section section--footer">
+        <div class="container container--footer">
+            <ul class="footerlist">
+                <li class="footerlist__link link"><a href="ui-kit.html">UI-Kit</a></li>
+                <li class="footerlist__link link"><a href="case-study.html">Case study</a></li>                
+                <li class="footerlist__link link"><a href="credits.html">Crédits</a></li>
+            </ul>
+            <small class="copyright">&copy; Simon Polomé &ndash;&#8239;DWM <span class="Date">Date</span> </small>
+            <a href="http://dwm.re/">
+                <svg class="icon--dwm" width="445" height="145" viewBox="0 0 445 145" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0)">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M34.6866 0H0V122.017H36.4161C71.2963 122.017 95.1947 102.37 95.1947 60.4529C95.1947 18.5358 71.2842 0 34.6745 0H34.6866ZM66.0957 60.4529C66.0957 89.6462 52.7919 99.7479 33.1386 99.7479H28.5185V22.2696H33.1386C52.7919 22.2696 66.0957 31.2475 66.0957 60.4529ZM102.887 0H132.373L136.219 64.9358C136.412 75.4242 136.606 84.5833 136.799 95.6275H137.573C139.303 84.5833 141.613 75.2308 143.742 64.9358L152.208 30.885H170.325L178.223 64.9358C180.351 75.0496 182.456 84.4021 184.391 95.6275H185.165C185.358 84.4021 185.552 75.0496 185.939 64.9358L189.398 0H216.949L201.54 122.017H171.099L163.77 84.2087C162.234 76.5358 160.698 68.3071 160.311 61.0087H159.73C158.995 68.7876 157.905 76.5289 156.465 84.2087L149.136 122.017H119.65L102.887 0ZM228.898 0H258.565L270.902 43.2342L275.135 60.0783H275.909L280.142 43.2342L292.49 0H322.17V122.017H298.247V84.2087C298.247 70.5546 300.751 40.7933 301.912 27.695H301.331L291.704 60.2596L282.065 89.6462H268.193L258.36 60.2596L249.313 27.695H248.733C250.075 40.7933 252.397 70.5546 252.397 84.2087V122.017H228.886V0" fill="var(--color-title)"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M357.51 145H445.001V122.018H357.51V145Z" fill="var(--color-primary)"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0">
+                    <rect width="445pt" height="145pt" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+            </a>
+        </div>
+    </footer>    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>
 </html>

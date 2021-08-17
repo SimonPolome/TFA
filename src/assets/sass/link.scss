@@ -1,0 +1,194 @@
+  /* Icon & image */
+  img{
+    max-width: 100%;
+}
+.image--1{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -35vw;    
+}
+.icon--privaci{
+    display: none;
+}
+.icon--card{
+    width: 4rem;
+    height: 4rem;
+}
+.icon--card path{
+    fill: var(--color-text);
+}
+.icon--dwm{
+    width: 6rem;
+    height: 6rem;    
+}
+.icon--lien{
+    width: 1rem;
+    height: 1rem;
+}
+
+
+/* Link & btn */
+a{
+    text-decoration: none; 
+    display: inline-block; 
+}
+.logo{
+    color: var(--color-text-light);
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    z-index: 10;              
+}
+.btn{
+    color: var(--color-text-light);
+    background-color: var(--color-primary);
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 1rem 2rem;
+    border-radius: 15px; 
+    border: 2px solid var(--color-primary); 
+    transition: all 0.3s cubic-bezier(0.1, 0.82, 0.76, 0.965);      
+}
+.btn:hover,
+.btn:focus{
+    background-color: #1f3499;
+    border-color: #1f3499;
+}
+.btn:active{
+    background-color: var(--color-text-light);
+    color: var(--color-primary);
+    border-color: var(--primary-color);
+}
+.nav__link a{    
+    margin: 1rem 0;   
+    font-size: 1.5rem; 
+    line-height: 2rem;    
+    letter-spacing: 1px;
+    font-weight: 400;  
+    color: var(--color-title);  
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.1, 0.82, 0.76, 0.965);     
+}
+.nav__link a::before{
+    content: "";
+    width: calc(100vw - 3rem);
+    height: 1px;
+    background-color: var(--color-title);
+    position: absolute;
+    top: -1rem;
+    left: 0;
+}
+.nav__link:last-child a::after{
+    content: "";
+    width: calc(100vw - 3rem);
+    height: 1px;
+    background-color: var(--color-title);
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+}
+.theme-switch{
+    display: inline-block;
+    height: 24px;    
+    width: 48px;
+    position: absolute;
+    top: 25rem;
+    left: 2rem;
+}  
+.theme-switch:hover .slider:before,
+.theme-switch:focus .slider:before{
+    opacity: .7;
+}
+.theme-switch input{
+    display:none;
+}  
+.slider {
+    background-color: var(--color-title);
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: all 0.3s cubic-bezier(0.1, 0.82, 0.76, 0.965);  
+}  
+.slider:before{
+    background-color: var(--color-bg);
+    bottom: 4px;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    position: absolute;
+    transition: all 0.3s cubic-bezier(0.1, 0.82, 0.76, 0.965);  
+}  
+input:checked + .slider{
+    background-color:var(--color-primary);
+}  
+input:checked + .slider:before{
+    transform: translateX(24px);
+}
+.slider.round{
+    border-radius: 24px;
+}  
+.slider.round:before{
+    border-radius: 50%;
+}
+.footerlist__link a{
+    font-size: 1rem; 
+    line-height: 1.5rem;    
+    letter-spacing: 1px;
+    font-weight: 400;  
+    color: var(--color-title); 
+    margin: 0 1rem;
+    transition: all 0.3s cubic-bezier(0.1, 0.82, 0.76, 0.965); 
+    position: relative;  
+    white-space: nowrap;
+}
+.nav__link a:hover,
+.nav__link a:focus{
+    font-weight: 600;
+}
+.link a:active{
+    color: var(--color-primary);
+}
+.link--active a{
+    color: #3456FF;
+}
+.footerlist__link a::before,
+.footerlist__link a::after {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    top: 100%;
+    left: 0;
+    pointer-events: none;
+}
+.footerlist__link a::before {
+    content: '';
+    transform-origin: 100% 50%;
+    transform: scale3d(0, 1, 1);
+    transition: transform 0.3s ease-out;
+}
+.footerlist__link a:hover::before,
+.footerlist__link a:focus::before{
+    transform-origin: 0% 50%;
+    transform: scale3d(1, 1, 1);
+}
+.lien a{
+    font-size: 18px;
+    color: var(--color-title);
+    margin-left: .5rem;
+}
+.lien a:hover,
+.lien a:focus{
+    font-weight: 600;
+}
+.lien a:focus{
+    color: var(--color-primary);
+}

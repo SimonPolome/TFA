@@ -1,9 +1,491 @@
-html {
-  box-sizing: border-box;
-  font-size: 16px;
-  background-color: lime;
-}
+@use "normalize.css";
+@use "variables.scss";
+@use "title.scss";
+@use "link.scss";
+@use "list.scss";
 
-*, *:before, *:after {
-  box-sizing: inherit;
-}
+  
+  /* Mise en place */
+  html{
+      scroll-behavior: smooth;
+  }
+  body{
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+      color: var(--color-text);
+      background-color: var(--color-bg);
+      box-sizing: border-box;  
+  }
+  
+  /* Section */
+  .section{
+      padding: 4rem 1.5rem;
+  }
+  header{    
+      background: linear-gradient(0deg, rgba(7, 9, 40, 0.5), rgba(7, 9, 40, 0.5)), url(../images/bg.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+  }
+  header,
+  .section--telechargement{
+      text-align: center;
+  }
+  .section--home{
+      padding: 3rem 1.5rem 45vw;
+  }
+  .section--apropos{
+      padding: 45vw 1.5rem 4rem;    
+  }
+  .section--apropos,
+  .section--telechargement{
+      background-color: var(--color-bg-offset);
+  }
+  .section--footer{
+      padding: 4rem 1.5rem 1rem;
+  }
+  .footer--cs{
+      background-color: var(--color-bg-offset);
+  }
+  
+  /* Cards */
+  .card{
+      background-color: var(--color-card);
+      width: 16rem;
+      margin-bottom: 1.5rem;   
+      padding: 3rem 2rem;
+      text-align: center;
+  }
+  .card--3{
+      margin-bottom: 0;
+  }
+  .container--card{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  /* Layout */
+  .title--big{
+      margin-bottom: 1rem;
+  }
+  .title--light{
+      margin: 0 0 2rem 0;
+  }
+  .title--medium{
+      margin-bottom: 1rem;    
+  }
+  .icon--card{
+      margin-bottom: 1rem;
+  }
+  .title--card{
+      margin-bottom: .5rem;
+  }
+  .title--telechargement{
+      margin-bottom: 2rem;
+  }
+  .container--footer{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  /* Layout Case Study */
+  .section--cs{
+      padding: 3rem 1.5rem;
+  }
+  .bg--cs{
+      background: var(--color-bg);    
+  }
+  
+  .menu--cs{
+      display: none;
+  }
+  .logo--cs{
+      color: var(--color-title);
+  }
+  .theme-switch--cs{
+      position: relative;
+      top: 0;
+      left: 0;
+  }
+  .slider--cs{
+      background-color: var(--color-title);
+  }
+  .slider--cs:before{
+      background-color: var(--color-bg);
+  }  
+  .margin--05{
+      margin-bottom: .5rem;
+  }
+  .margin--1{
+      margin-bottom: 1rem;
+  }
+  .margin--15{
+      margin-bottom: 1.5rem;
+  }
+  .margin--2{
+      margin-bottom: 2rem;
+  }
+  .margin--4{
+      margin-bottom: 4rem;
+  }
+  .liste--cs{
+      list-style: inherit;
+      list-style-type: circle;
+      margin-left: 2rem;
+  }
+  .liste__item{
+      margin-bottom: .5rem;
+  }
+  
+  /* Layout UI-Kit */
+  .section--ui{
+      padding: 3rem 1.5rem;
+  }
+  .titlebig--ui{
+      color: var(--color-title);
+  }
+  .palette{
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 2rem;    
+  }
+  .palette__couleur{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #3456FF;    
+      width: 6rem;
+      height: 3rem;
+      margin: 1rem 1rem 0 0;
+      border-radius: 15px;
+      border: 1px solid #3456FF;
+      font-weight: 600;
+      color: #FFFFFF;   
+  }
+  .palette__couleur--1{
+      background-color: #F8F8FA;
+      color: #070928;
+  }
+  .palette__couleur--2{
+      background-color: #3456FF;
+  }
+  .palette__couleur--3{
+      background-color: #393A53;    
+  }
+  .palette__couleur--4{
+      background-color: #070928;    
+  }
+   
+  /* Responsive */
+  @media (min-width: 768px){
+      /* navigation */
+      .nav{
+          display: inherit;
+          align-items: center;
+      }
+      .header{
+          align-items: center;
+      }
+      .menu{
+          display: none;
+      }
+      .nav__menu{
+          margin: 0; 
+          display: flex;  
+      }
+      .nav__link a{    
+          margin: 0 1.5rem 0 0;   
+          font-size: 1rem; 
+          line-height: 1.5rem;    
+          color: #FFFFFF;  
+          position: relative;   
+      }
+      .nav__link a::before,
+      .nav__link a::after {
+          position: absolute;
+          width: 100%;
+          height: 1px;
+          background: currentColor;
+          top: 100%;
+          left: 0;
+          pointer-events: none;
+      }
+      .nav__link a::before {
+          content: '';
+          transform-origin: 100% 50%;
+          transform: scale3d(0, 1, 1);
+          transition: transform 0.3s ease-out;
+      }
+      .nav__link a:hover,
+      .nav__link a:focus,
+      .nav__link a:active{
+          font-weight: 400;
+      }    
+      .nav__link a:hover::before,
+      .nav__link a:focus::before{        
+          transform-origin: 0% 50%;
+          transform: scale3d(1, 1, 1);
+      }
+      .nav__link:last-child a::after{
+          content: none;
+      }
+      .theme-switch {
+          position: relative;
+          top: 0;
+          left: 0;
+      } 
+      .slider{
+          background-color: #FFFFFF;
+      }
+      .slider:before {
+          background-color: #070928;
+      }  
+  
+  
+      
+      /* Section */
+      .section{
+          padding: 4rem 3rem;
+      }
+      .section--home{
+          padding: 4rem 3rem 35vw;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+      .section--apropos{
+          padding: 45vw 3rem 4rem;    
+      }
+      .header{
+          padding: 2rem 3rem 3rem;
+      }
+      .section--footer{
+          padding: 4rem 3rem 2rem;
+      }
+  
+  
+      /* Title & text */
+      .title--big{
+          font-size: 54px;
+          line-height: 64px;        
+      }
+      .title--medium{
+          font-size: 36px;
+          line-height: 40px;
+      }
+      .title--small{
+          font-size: 24px;
+          line-height: 32px;    
+      }
+  
+  
+      /* Link & btn */
+      .logo{        
+          font-size: 2rem;
+          line-height: 2.5rem;           
+      }
+      .btn{
+          font-size: 1.5rem;
+          line-height: 2rem;  
+          padding: 1.5rem 3rem; 
+      }
+      .footerlist__link a{
+          font-size: 1.5rem; 
+          line-height: 2rem;
+          margin: 0 2rem;     
+      }
+  
+      /* Icon & image */
+      .image--1{
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: -35vw;         
+      }
+      
+  
+      /* Layout */
+      .title--big{
+          margin-bottom: 1.5rem;
+      }
+      .title--light{
+          margin: 0 0 3rem 0;
+      }
+      .title--medium{
+          margin-bottom: 1.5rem;    
+      }
+      .container-apropos{
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          align-items: center;
+      }
+      .title--telechargement{
+          margin-bottom: 3rem;
+      }
+  
+      /* Cards */
+      .card{
+          width: 18rem;
+          margin: 1.5rem;
+      }
+      .container--card{
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+      }
+  
+  
+      /* Layout Case Study */
+      .section--cs{
+          padding: 5rem 3rem;
+      }
+      .header--cs{         
+          padding: 2rem 3rem;   
+      }
+      .slider--cs{
+          background-color: var(--color-title);
+      }
+      .slider--cs:before{
+          background-color: var(--color-bg);
+      }  
+      .margin--05{
+          margin-bottom: .5rem;
+      }
+      .margin--1{
+          margin-bottom: 1rem;
+      }
+      .margin--15{
+          margin-bottom: 1.5rem;
+      }
+      .margin--2{
+          margin-bottom: 2rem;
+      }
+  
+      .section--ui{
+          padding: 5rem 3rem;
+      }      
+  }
+  
+  @media (min-width: 1024px){
+      /* Section */
+      .section{
+          padding: 6rem 4rem;
+      }
+      .section--home{
+          padding: 6rem 4rem 20rem;
+      }
+      .section--apropos{
+          padding: 20rem 4rem 6rem;    
+      }
+      .header{
+          padding: 2rem 4rem;
+      }
+      .section--footer{
+          padding: 4rem 4rem 2rem;
+      }
+      .container{
+          max-width: 1200px;
+          margin: 0 auto;
+      }
+      .container--card{
+          max-width: none;
+      }
+      
+  
+      /* Icon & image */
+      .image--1{
+          bottom: -20rem;  
+          width: 900px;       
+      }
+  
+      /* Link & btn */
+      .nav__link a{    
+          margin: 0 2rem 0 0;   
+          font-size: 18px; 
+          line-height: 24px;     
+      }
+  
+  
+      /* Title & text */
+      .title--big{
+          font-size: 61px;
+          line-height: 72px;        
+      }
+      .title--medium{
+          font-size: 40px;
+          line-height: 48px;
+      }
+      .title--small{
+          font-size: 27px;
+          line-height: 32px;    
+      }
+      p{
+          font-size: 18px;
+      }
+  
+      /* Layout */
+      .title--light{
+          margin: 0 4rem 4rem;
+      }
+      .title--medium{
+          margin-bottom: 2rem;    
+      }
+      .title--telechargement{
+          margin-bottom: 4rem;
+      }
+  
+      /* Cards */
+      .card{
+          width: 20rem;
+          margin: 1.5rem;        
+      }
+      .icon--card{
+          margin-bottom: 2rem;
+          width: 5rem;
+          height: 5rem;
+      }
+      .title--card{
+          margin-bottom: 1rem;
+      }
+  
+      /* Layout Case Study */
+      .section--cs{
+          padding: 5rem 0;
+      }    
+      .header--cs{         
+          padding: 2rem 4rem;
+      }
+      .margin--05{
+          margin-bottom: .5rem;
+      }
+      .margin--1{
+          margin-bottom: 1rem;
+      }
+      .margin--15{
+          margin-top: 4px;
+          margin-bottom: 0;
+      }
+      .margin--2{
+          margin-bottom: 2rem;
+      }
+      .section--cs{
+          display: grid;
+          grid-template-columns: 1fr 3fr;
+          grid-column-gap: 5rem;
+      }
+      .container--cs,
+      .container--ui{
+          max-width: 900px;
+      }
+      .section--ui{
+          padding: 5rem 0;
+      }   
+  }

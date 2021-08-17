@@ -1,0 +1,32 @@
+  /* Ttile & text */
+  .title{
+    color: var(--color-title);
+    margin: 0;    
+}
+p{
+    margin: 0;
+}
+.title--big{
+    font-size: 38px;
+    line-height: 44px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: var(--color-text-light); 
+    text-transform: uppercase;   
+}
+.title--medium{
+    font-size: 28px;
+    line-height: 32px;
+    font-weight: 600;
+}
+.title--small{
+    font-size: 21px;
+    line-height: 24px;
+    font-weight: 600;    
+}
+.title--light{
+    color: #F8F8FA;
+}
+.title--weight{
+    font-weight: 300;
+}
